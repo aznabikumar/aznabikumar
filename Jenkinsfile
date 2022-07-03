@@ -19,7 +19,7 @@ pipeline {
             when {
                 expression {
                 params.executeTest == True
-            steps {
+                steps {
                   echo 'building jar'
                  }
              }  
