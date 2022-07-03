@@ -1,35 +1,33 @@
 pipeline {
     agent any
     stages {
-        stage("init") {
+        stage("init") 
+             {
             steps{
                 echo 'building the application'
-            }
+                 }
 
-            }
-        }
+             }
+          }
         stage("build jar") {
             steps {
-                script {
-                    echo "building jar"
-                    //gv.buildJar()
+                  echo 'building jar'
                 }
             }
         }
         stage("build image") {
             steps {
-                script {
-                    echo "building image"
+                
+                    echo 'building image'
                     //gv.buildImage()
                 }
             }
         }
         stage("deploy") {
             steps {
-                script {
-                    echo "deploying"
-                    //gv.deployApp()
-                }
+                
+                    echo 'deploying'
+                       }
             }
         }
-    }   
+    } 
