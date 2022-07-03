@@ -14,12 +14,13 @@ pipeline {
                 echo 'building the application'
                  }
              }
+            
         stage("build jar") {
           
             when {
                 expression {
-                params.executeTest == True
-                steps {
+                    params.executeTest == True
+                    steps {
                   echo 'building jar'
                  }
              }  
