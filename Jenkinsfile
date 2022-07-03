@@ -6,27 +6,22 @@ pipeline {
             steps{
                 echo 'building the application'
                  }
-
              }
-          }
-        stage("build jar") {
+         stage("build jar") {
             steps {
                   echo 'building jar'
-                }
-            }
-        }
+                 }
+             }  
+  
         stage("build image") {
             steps {
-                
-                    echo 'building image'
-                    //gv.buildImage()
-                }
+                echo 'building image'
+                   }
             }
-        }
+       
         stage("deploy") {
             steps {
-                
-                    echo 'deploying'
+                  echo 'deploying'
                        }
             }
         }
