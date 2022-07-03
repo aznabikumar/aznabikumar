@@ -21,7 +21,7 @@ pipeline {
                   echo 'building jar'
                  }
              }  
-  
+            }
         stage("build image") {
             steps {
                 echo 'building image'
@@ -34,6 +34,6 @@ pipeline {
                        }
             }
         }
-    }
+    
       }
     }
