@@ -20,11 +20,12 @@ pipeline {
             when {
                 expression {
                     params.executeTest == True
-                    steps {
-                  echo 'building jar'
+            steps {
+                echo 'building jar'
                  }
              }  
             }
+          }  
         stage("build image") {
             steps {
                 echo 'building image'
@@ -33,10 +34,9 @@ pipeline {
        
         stage("deploy") {
             steps {
-                  echo 'deploying'
-                       }
+                echo 'deploying'
+                  }
             }
         }
     
       }
-    }
