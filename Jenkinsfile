@@ -7,17 +7,19 @@ pipeline {
                }
     
     stages {
+        
         stage("init") 
              {
             steps{
                 echo 'building the application'
                  }
              }
-         stage("build jar") {
+        stage("build jar") {
+          
             when {
                 expression {
                 params.executeTest == True
-             steps {
+            steps {
                   echo 'building jar'
                  }
              }  
