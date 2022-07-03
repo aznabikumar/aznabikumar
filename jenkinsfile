@@ -1,10 +1,36 @@
 pipeline {
-    agent any  
+    agent any
     stages {
-        stage('Example Build') {
-            steps {
-                sh 'mvn -B clean verify'
+        stage("init") {
+            steps{
+                echo 'building the application'
+            }
+
             }
         }
-    }
+        stage("build jar") {
+            steps {
+                script {
+                    echo "building jar"
+                    //gv.buildJar()
+                }
+            }
+        }
+        stage("build image") {
+            steps {
+                script {
+                    echo "building image"
+                    //gv.buildImage()
+                }
+            }
+        }
+        stage("deploy") {
+            steps {
+                script {
+                    echo "deploying"
+                    //gv.deployApp()
+                }
+            }
+        }
+    }   
 }
