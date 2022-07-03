@@ -4,7 +4,7 @@ pipeline {
         choice(name: 'VERSION', choices: ['1.0' , '2.0' , '3.0' ], description : ' ')
         booleanParam(name: 'executeTest', defaultValue: true, description: ' ')
     
-    }
+               }
     
     stages {
         stage("init") 
@@ -34,4 +34,6 @@ pipeline {
                        }
             }
         }
+    }
+      }
     }
